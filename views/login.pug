@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+  div(class="container" style(with:10%))
+    form(action="/login", method="post")
+      h1 Comprobar Token
+      if message.length > 0
+        .alert.alert-danger(style(margin-bottom:10px)) #{message}
+      .input-group.mb-3(style(margin-top:30px))
+        span.input-group-text(id="basic-addon1") @
+        input.form-control(type="text" name="username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required)
+      .input-group.mb-3(style(margin-top:30px))
+        span.input-group-text(id="basic-addon1") OTP
+        input.form-control(type="text" name="token" placeholder="token" aria-label="token" aria-describedby="basic-addon1" required)
+      .input-group.mb-3
+        button(class="btn btn-primary" type="submit") Sign In

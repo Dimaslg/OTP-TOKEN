@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+  div(class="container" style(with:10%))
+    form(action="/signIn", method="post")
+      h1 Crear QR
+      if message.length > 0
+        .alert.alert-danger(style(margin-bottom:10px)) #{message}
+      .input-group.mb-3(style(margin-top:30px))
+        span.input-group-text(id="basic-addon1") @
+        input.form-control(type="text" name="username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1")
+      .input-group.mb-3
+        button(class="btn btn-primary" type="submit") Sign In

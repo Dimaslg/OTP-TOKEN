@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    
+    button(class="btn btn-primary" href="/home") Volver al inicio
+    h1 TOKEN 
+    label #{otp.secret}
+
+    h1 QR
+    img(src=otp.qr)
+
+    
