@@ -21,7 +21,7 @@ router.post('/signin', (req, res) => {
       account: user.username,
     });
     userService.createUser({username: user.username, otp: otp.secret});
-    res.render('otp', { title: 'OTP', otp: otp});
+    res.render('otpview', { title: 'OTP', otp: otp});
   } else {
     req.flash('error', 'El usuario ya existe');
     res.redirect('/');

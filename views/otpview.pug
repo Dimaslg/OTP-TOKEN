@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    
+     a.btn.btn-outline-primary.btn-block.text-center(href="/" role="button") Volver al inicio
+    h1 TOKEN 
+    label #{otp.secret}
+
+    h1 QR
+    img(src=otp.qr)
+
+    
